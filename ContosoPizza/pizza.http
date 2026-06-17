@@ -1,0 +1,29 @@
+@baseUrl = http://localhost:5164/pizza
+
+### GET all pizzas
+GET {{baseUrl}}
+
+### GET one pizza
+GET {{baseUrl}}/1
+
+### POST new pizza
+POST {{baseUrl}}
+Content-Type: application/json
+
+{
+    "name": "Margherita",
+    "isGlutenFree": false
+}
+
+### PUT update pizza
+PUT {{baseUrl}}/1
+Content-Type: application/json
+
+{
+    "id": 1,
+    "name": "Classic Italian Updated",
+    "isGlutenFree": false
+}
+
+### DELETE pizza
+DELETE {{baseUrl}}/3
